@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1 class="text-center fw-bold fst-italic bg-danger py-4 text-white font-monospace">Resume Uploader</h1>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <div class="container">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="inputname" class="form-label">Name</label>
+                        <input type="text" name="name" class="form-control" id="name" aria-describedby="nameHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputname" class="form-label">Technology Prefer</label>
+                        <input type="text" name="tech" class="form-control" id="tech" aria-describedby="nameHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Resume" class="form-label">Resume</label>
+                        <input type="file" name="Resume" class="form-control" id="Resume">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+</body>
+
+</html>
